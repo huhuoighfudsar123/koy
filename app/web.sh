@@ -24,7 +24,7 @@ echo '{
                     },
                     {
                         "path": "/vmess",
-                        "dest": 3003
+                        "dest": 2095
                     }
                 ]
             },
@@ -69,8 +69,8 @@ echo '{
             }
         },
         {
-            "port": 3003,
-            "listen": "127.0.0.1",
+            "port": 2095,
+            "listen": "0.0.0.0",
             "protocol": "vmess",
             "settings": {
                 "clients": [
