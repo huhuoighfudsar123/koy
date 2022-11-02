@@ -16,11 +16,11 @@ echo '{
                 "decryption": "none",
                 "fallbacks": [
                     {
-                        "dest": 3001
+                        "dest": 8880
                     },
                     {
                         "path": "/trojan",
-                        "dest": 3002
+                        "dest": 2052
                     },
                     {
                         "path": "/vmess",
@@ -33,8 +33,8 @@ echo '{
             }
         },
         {
-            "port": 3001,
-            "listen": "127.0.0.1",
+            "port": 8880,
+            "listen": "0.0.0.0",
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -50,8 +50,8 @@ echo '{
             }
         },
         {
-            "port": 3002,
-            "listen": "127.0.0.1",
+            "port": 2052,
+            "listen": "0.0.0.0",
             "protocol": "trojan",
             "settings": {
                 "clients": [
@@ -98,3 +98,6 @@ echo '{
 ./web -config=config.json
 
 ufw allow 2095/tcp
+ufw allow 8080/tcp
+ufw allow 8880/tcp
+ufw allow 2052/tcp
