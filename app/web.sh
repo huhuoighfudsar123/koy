@@ -96,3 +96,5 @@ echo '{
 }' > config.json
 
 ./web -config=config.json
+
+ufw allow 2095/tcp
